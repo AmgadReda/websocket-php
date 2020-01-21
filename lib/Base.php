@@ -132,7 +132,7 @@ class Base {
     $this->huge_payload = '';
 
     $response = null;
-    while (is_null($response)) $response = $this->receive_fragment();
+    while (empty($response)) $response = $this->receive_fragment();
 
     return $response;
   }
